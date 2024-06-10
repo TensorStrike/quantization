@@ -9,3 +9,8 @@ print(random_int8)
 random_hs = torch.randn((1,16), dtype=torch.bfloat16)
 print(random_hs)
 scales = torch.randn((1,32), dtype=torch.bfloat16)
+print(scales)
+bias = torch.rand((1,32), dtype=torch.bfloat16)
+print(bias)
+
+print(F.linear(random_hs, random_int8.to(random_hs.dtype)))
